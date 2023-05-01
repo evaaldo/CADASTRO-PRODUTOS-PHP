@@ -1,7 +1,7 @@
 <?php
 
-echo "<h1>oii, deu tudo certo</h1>";
+echo "<h1>oii, mimirooo tiamo <3</h1>";
 
-echo '<a href="?logout">Sair</a>';
+echo '<a class="btnLogout" href="?logout">Sair</a>';
 
 ?>

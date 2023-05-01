@@ -4,6 +4,7 @@
 <html lang="pt-br">
 <head>
     <title>Login</title>
+    <link rel="stylesheet" href="login.css">
 </head>
 <body>
     <?php 
@@ -11,7 +12,7 @@
         if(!isset($_SESSION['login'])) {
 
             if(isset($_POST['acao'])) {
-                $usuario = 'evaldo';
+                $usuario = 'argemironenem';
                 $senha = '123456';
 
                 $usuarioForm = $_POST['usuario'];
@@ -21,7 +22,7 @@
                     $_SESSION['login'] = true;
                     header(index.php);
                 } else {
-                    echo "deu ruim o login ai meu chapa ;)";
+                    echo "<p class='error'>deu ruim o login ai meu chapa ;)</p>";
                 }
             }
             

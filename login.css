@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200&display=swap');
+
+:root {
+    --vermelho: #f00;
+    --verde: #0f0;
+    --azul: #00f;
+    --branco: #fff;
+    --preto: #000;
+    --fundo-login: #41644A;
+    --cinza: #ababab;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--fundo-login);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Poppins', sans-serif;
+    color: var(--branco);
+}
+
+form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 1em;
+    margin-top: 5em;
+}
+
+h1 {
+    font-size: 3em;
+}
+
+form input {
+    padding: .3em 1em;
+    border: 0;
+    border-radius: 10px;
+    width: 15em;
+    height: 2em;
+    text-align: center;
+    font-size: 1.1em;
+}
+
+.bntSubmit {
+    width: 10em;
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    transition: .4s;
+    background-color: var(--preto);
+    color: var(--branco);
+}
+
+.bntSubmit:hover {
+    background-color: var(--branco);
+    color: var(--preto);
+}
+
+.error {
+    background-color: var(--cinza);
+    color: var(--branco);
+    margin-top: .5em;
+    padding: .3em .7em;
+    border-radius: 15px;
+}
+
+.btnLogout {
+    text-decoration: none;
+    width: 10em;
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    transition: .4s;
+    color: var(--branco);
+    background-color: var(--preto);
+    text-align: center;
+    border-radius: 15px;
+    padding: .3em .6em;
+    transition: .4s;
+}
+
+.btnLogout:hover {
+    background-color: var(--branco);
+    color: var(--preto);
+}

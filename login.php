@@ -1,5 +1,6 @@
 <form method="post">
-    <input type="text" name="usuario">
-    <input type="password" name="senha">
-    <input type="submit" value="Entrar" name="acao">
+    <h1>Login</h1>
+    <input type="text" name="usuario" placeholder="Usuário">
+    <input type="password" name="senha" placeholder="Senha">
+    <input class="bntSubmit" type="submit" value="Entrar" name="acao">
 </form>
