@@ -22,8 +22,8 @@ if(isset($_POST['acao'])) {
     $descricao = $_POST['descricao'];
     $valor = $_POST['valor'];
 
-    $cadastrar = "INSERT INTO tb_produtos (produto, descricao, preco) VALUES ('$produto', '$descricao', '$valor')";
-    $cadastrar_query = $mysqli->query($cadastrar) or exit($mysqli->error);
+    $cadastrar = "INSERT INTO tb_produtos (imagem, produto, descricao, preco) VALUES ('$imagem', '$produto', '$descricao', '$valor')";
+    $cadastrar_query = $conexao->query($cadastrar) or exit($conexao->error);
 }
 
 ?>
@@ -41,7 +41,7 @@ if(isset($_POST['excluir'])) {
     $produtoExcluir = $_POST['produtoExcluir'];
 
     $excluir = "DELETE FROM tb_produtos WHERE produto = '$produtoExcluir'";
-    $excluir_query = $mysqli->query($excluir) or exit($mysqli->error);
+    $excluir_query = $conexao->query($excluir) or exit($mysqli->error);
 }
 
 ?>

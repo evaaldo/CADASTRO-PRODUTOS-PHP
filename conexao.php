@@ -5,9 +5,9 @@ $password = "";
 $database = "produtos";
 $hostname = "localhost";
 
-$mysqli = new mysqli($hostname, $username, $password, $database);
-if($mysqli->error) {
-    exit("Erro ao conectar-se com o banco. " . $mysqli->error);
+$conexao = mysqli_connect($hostname, $username, $password, $database);
+if($conexao->error) {
+    exit("Erro ao conectar-se com o banco. " . $conexao->error);
 }
 
 ?>
