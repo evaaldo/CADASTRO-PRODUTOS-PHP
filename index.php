@@ -7,7 +7,7 @@
 <body>
     <section class="produtos">
         <h1>E-commerce</h1>
-        <a href="cadastro.php">Adicionar produto</a>
+        <a href="CUD.php">Manutenção de produtos</a>
         <?php
         include('conexao.php');
 
