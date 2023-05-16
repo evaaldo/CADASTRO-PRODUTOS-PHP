@@ -11,6 +11,7 @@ include('conexao.php');
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Manutenção de produtos</title>
+    <link rel="stylesheet" href="CUD.css">
 </head>
 <body>
     <h1>Cadastro de produtos</h1>
@@ -21,7 +22,7 @@ include('conexao.php');
         <input type="text" name="descricao" required>
         <label for="valor">Preço</label>
         <input type="number" name="valor" id="valor" required>
-        <input type="submit" value="Salvar" name="acao">
+        <input class="btn-submit" type="submit" value="Salvar" name="acao">
     </form>
 
     <?php
@@ -37,12 +38,13 @@ include('conexao.php');
 
     ?>
 
+    <h1>Remoção de produtos</h1>
     <form method="post">
         <label for="produtoExcluir">Produto</label>
         <input type="text" name="produtoExcluir">
-        <input type="submit" value="Excluir" name="excluir">
+        <input class="btn-submit" type="submit" value="Excluir" name="excluir">
     </form>
-    <a href="index.php">Voltar</a>
+    <a class="btn-submit" href="index.php">Voltar</a>
 
     <?php
 
