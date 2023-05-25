@@ -1,3 +1,5 @@
 <h1>CADASTRO DE PRODUTOS</h1>
 
-<p><h2><strong>O QUE É?</strong></h2><br/>Aqui foi desenvolvido um CRUD com PHP e MySQL para registrar novos produtos, removê-los, editá-los e visualizá-los por meio de uma interface web.</p>
+<p><h2><strong>O que é?</strong></h2><br/>Aqui foi desenvolvido um CRUD com PHP e MySQL para registrar novos produtos, removê-los, editá-los e visualizá-los por meio de uma interface web.</p>
+
+<p><h2><strong>Como é feito?</strong></h2><br/>Toda a interface visual foi feita com HTML dentro de PHP, utilizando formulários. Cada formulário utiliza o método POST para registrar, acessar, excluir ou editar informações do banco de dados MySQL em que tudo está salvo. Além disso, foi estilizado normalmente utilizando CSS.</p>
