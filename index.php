@@ -1,33 +1,30 @@
+<?php
+
+?>
+
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 <head>
-    <title>Produtos</title>
-    <link rel="stylesheet" href="index.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acessar treinos</title>
 </head>
 <body>
-    <section class="produtos">
-        <h1>E-commerce</h1>
-        <a href="CUD.php">Manutenção de produtos</a>
-        <div class="produto">
-            <?php
-            include('conexao.php');
+    <section class="box-login">
+        <div class="box-arte">
 
-            $consulta = "SELECT * FROM tb_produtos";
-            $consulta_query = $conexao->query($consulta);
-
-            $quantidade = $consulta_query->num_rows;
-
-            if($quantidade > 0) {
-                while($row = $consulta_query->fetch_object()) {
-                    print "<div class='caixa'>";
-                    print "<h2>" . $row->produto . "</h2>";
-                    print "<h4>R$ " . $row->preco . ",00</h4>";
-                    print "<p>" . $row->descricao . "</p>";
-                    print "<button>Comprar</button>";
-                    print "</div>";
-                }
-            }
-            ?>
+        </div>
+        <div class="box-credenciais">
+            <form class="box-form" method="post">
+                <label for="nome">Nome</label>
+                <input type="text" name="nome" id="nome" placeholder="Nome..">
+                <label for="senha">Senha</label>
+                <input type="text" name="senha" id="senha" placeholder="Senha..">
+                <input type="submit" value="Entrar">
+            </form>
+            <a class="signUp" href="cadastro.php">Cadastrar-se</a>
+            <a class="github" href="">Conheça mais sobre o nosso desenvolvedor!</a>
         </div>
     </section>
 </body>
