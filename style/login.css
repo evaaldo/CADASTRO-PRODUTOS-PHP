@@ -1,0 +1,53 @@
+@import url(/style/style.css);
+
+body {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box-login {
+    display: flex;
+}
+
+.box-credenciais {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.box-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.box-form label {
+    font-weight: 600;
+}
+
+
+.box-form-input {
+    margin-bottom: 1em;
+    padding: .2em .3em;
+}
+
+.btn-login {
+    cursor: pointer;
+    margin-bottom: 1em;
+}
+
+.signUp, .github {
+    cursor: pointer;
+    text-decoration: none;
+    color: var(--preto-fundo);
+    border-radius: 5px;
+    padding: .5em 1em;
+    transition: .2s ease;
+    font-weight: 600;
+    font-size: .8em;
+}
+
