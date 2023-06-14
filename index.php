@@ -1,6 +1,4 @@
-<?php
-
-?>
+<?php session_start(); ?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -21,11 +19,29 @@
                 <input type="text" name="nome" id="nome" placeholder="Nome..">
                 <label for="senha">Senha</label>
                 <input type="text" name="senha" id="senha" placeholder="Senha..">
-                <input type="submit" value="Entrar">
+                <input type="submit" value="Entrar" name="login">
             </form>
             <a class="signUp" href="cadastro.php">Cadastrar-se</a>
-            <a class="github" href="">Conheça mais sobre o nosso desenvolvedor!</a>
+            <a class="github" href="https://github.com/evaaldo">Conheça mais sobre o nosso desenvolvedor!</a>
         </div>
+
+        <?php
+        if(isset($_POST['login'])) {
+            $nome = $_POST['nome'];
+            $senha = $_POST['senha'];
+
+            $nomeAcesso = "Evaldo";
+            $senhaAcesso = "123";
+
+            if($nome == $nomeAcesso && $senha == $senhaAcesso) {
+                $_SESSION['login'] = $_POST['nome'];
+                header("Location: home.php");
+            } else {
+                echo("<script> alert('acerta o login ai oh pau nas beira!'); </script>");
+            }
+        }
+        ?>
+
     </section>
 </body>
 </html>
