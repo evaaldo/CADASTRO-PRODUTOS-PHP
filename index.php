@@ -16,9 +16,9 @@
         <div class="box-credenciais">
             <form class="box-form" method="post">
                 <label for="nome">Nome</label>
-                <input type="text" name="nome" id="nome" placeholder="Nome..">
+                <input type="text" name="nome" id="nome" placeholder="Nome.." required>
                 <label for="senha">Senha</label>
-                <input type="text" name="senha" id="senha" placeholder="Senha..">
+                <input type="text" name="senha" id="senha" placeholder="Senha.." required>
                 <input type="submit" value="Entrar" name="login">
             </form>
             <a class="signUp" href="cadastro.php">Cadastrar-se</a>
@@ -26,18 +26,23 @@
         </div>
 
         <?php
+
+        include("conexao.php");
+
         if(isset($_POST['login'])) {
             $nome = $_POST['nome'];
             $senha = $_POST['senha'];
 
-            $nomeAcesso = "Evaldo";
-            $senhaAcesso = "123";
+            $sql = "SELECT * FROM tb_usuario WHERE nome = '$nome' AND senha = '$senha'";
+            $sql_query = $conexao->query($sql) or exit($conexao->error);
 
-            if($nome == $nomeAcesso && $senha == $senhaAcesso) {
+            $quantidade = $sql_query->num_rows;
+
+            if($quantidade == 1) {
                 $_SESSION['login'] = $_POST['nome'];
                 header("Location: home.php");
             } else {
-                echo("<script> alert('acerta o login ai oh pau nas beira!'); </script>");
+                header("Location: erro.php");
             }
         }
         ?>
